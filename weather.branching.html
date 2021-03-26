@@ -1,0 +1,23 @@
+<script>
+    // IN: meteo data
+    //: OUT: document -> img
+
+    let temperatureC = parseInt( prompt("Enter Temperature"))
+
+   const LIMIT = 18
+
+   if ( temperatureC > 1) {
+    document.write ( ` + ${temperatureC} C`)
+   } else if ( temperatureC <= 0 ) {
+   document.write ( `  ${temperatureC} C`)  
+   } 
+
+    if ( temperatureC >= LIMIT ) {
+        document.write ( `<br> WARM`)
+        document.write ( "<br><img src='https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/128/Status-weather-clear-icon.png'>" )
+    } else {
+        document.write ( `<br> COLD` )
+        document.write ( "<br><img src='https://icons.iconarchive.com/icons/mkho/christmas/128/Snow-flake-icon.png'>" )
+    }
+
+</script>

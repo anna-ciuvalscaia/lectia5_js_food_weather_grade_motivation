@@ -1,0 +1,28 @@
+<script>
+let grade = parseInt( prompt("Your grade please: ") )
+// HW2:
+// what would result
+// parseInt( 9.9 )   -  RETURNEAZA = 9
+// parseInt( 9.1)    -  RETURNEAZA = 9
+// parseInt( 9.5 )   -  RETURNEAZA = 9 
+// parseInt( 9.59 )  -  RETURNEAZA = 9 
+
+const LIMIT = 7
+
+if ( grade >= LIMIT ) { 
+
+   if ( grade <= 8 ) { alert("ok") 
+     } else if ( grade == 9 ) { alert("good")
+         } else if ( grade == 10 ) { alert("Excelent") }
+ 
+  
+} else {
+    if ( grade <= 4 ) { alert("VERY BAD") 
+       } else {alert("BAD")}
+}
+
+
+
+
+
+</script>

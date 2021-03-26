@@ -1,0 +1,116 @@
+<script>
+
+    food_1_name   =  "Pizza"
+    food_1_price  =  75.89
+    food_1_availQ = 10
+    food_2_name   =  "Salad"
+    food_2_price  =  25.99
+    food_2_availQ = 7
+    food_3_name   =  "Fish"
+    food_3_price  =  89.99
+    food_3_availQ = 3
+    food_4_name   =  "Ice cream"
+    food_4_price  =  33.49
+    food_4_availQ = 8
+    unites = "MDL"
+ 
+    
+ 
+ 
+    alert (
+    
+   ` ############ MENIU FOOD #############
+    1. "${food_1_name}"  ${food_1_price} ${unites}
+    2. "${food_2_name}"  ${food_2_price} ${unites}
+    3. "${food_3_name}"  ${food_3_price} ${unites}
+    4. "${food_4_name}"  ${food_4_price} ${unites}
+    ############ MENIU FOOD ############# `
+
+  )
+
+    // Cantitatea
+    // parseInt - intoarce valoarea intraga daca utilizatorul introduce numere cu virgula atunci se intoarce valoarea intraga
+    food_1_quantity = parseInt( prompt(`How many "${food_1_name}" do you want?`) )
+    if ( food_1_availQ >= food_1_quantity) {
+    food_2_quantity = parseInt( prompt(`How many "${food_2_name}" do you want?`) )
+    if ( food_2_availQ >= food_2_quantity) {
+    food_3_quantity = parseInt( prompt(`How many "${food_3_name}" do you want?`) )
+    if ( food_3_availQ >= food_3_quantity) {
+    food_4_quantity = parseInt( prompt(`How many "${food_4_name}" do you want?`) )
+    if ( food_4_availQ >= food_4_quantity) {
+         
+      // Calculam Costul fiecarui produs
+         cost_1 = food_1_price * food_1_quantity
+    cost_2 = food_2_price * food_2_quantity
+    cost_3 = food_3_price * food_3_quantity
+    cost_4 = food_4_price * food_4_quantity
+
+     // Costul TOTAL
+    totalCost = cost_1 + cost_2 + cost_3 + cost_4
+
+
+    // Livrarea gratuita
+    free_delivery = totalCost > 200.00 
+    delivery = 50.00
+    totalCostDelivery = totalCost + delivery
+
+    if ( totalCost > 200.00  ) {
+        alert (
+` ############### BILL ###############
+1. "${food_1_name}" x ${food_1_quantity} = ${cost_1.toFixed(2)}
+2. "${food_2_name}" x ${food_2_quantity} = ${cost_2.toFixed(2)}
+3. "${food_3_name}" x ${food_3_quantity} = ${cost_3.toFixed(2)}
+4. "${food_4_name}" x ${food_4_quantity} = ${cost_4.toFixed(2)}
+-----------------------------------------
+total: ${totalCost.toFixed(2)} ${unites}
+Delivery: FREE
+############### BILL ############### `
+    )  
+       
+    } else {
+      alert (
+` ############### BILL ###############
+1. "${food_1_name}" x ${food_1_quantity} = ${cost_1.toFixed(2)}
+2. "${food_2_name}" x ${food_2_quantity} = ${cost_2.toFixed(2)}
+3. "${food_3_name}" x ${food_3_quantity} = ${cost_3.toFixed(2)}
+4. "${food_4_name}" x ${food_4_quantity} = ${cost_4.toFixed(2)}
+-----------------------------------------
+total: ${totalCost.toFixed(2)} ${unites}
+Delivery: 50 MDL
+TOTAL COST: ${totalCostDelivery.toFixed(2)}  ${unites}
+############### BILL ############### `)
+    } 
+    
+
+    } else {
+      alert( "Sory, we can offer only: " + food_4_name + " este dispoinibil dor " + food_4_availQ + " buc." )
+    }
+    } else {
+      alert( "Sory, we can offer only: " + food_3_name + " este dispoinibil dor " + food_3_availQ + " buc." )
+    }
+    } else {
+      alert( "Sory, we can offer only: " + food_2_name + " este dispoinibil dor " + food_2_availQ + " buc." )
+    }
+    } else {
+      alert( "Sory, we can offer only: " + food_1_name + " este dispoinibil dor " + food_1_availQ + " buc." )
+    } 
+    
+
+
+    
+
+    
+
+
+   
+
+
+
+
+   
+    
+   
+    
+
+</script>
+
